@@ -10,15 +10,28 @@ body {
 
 .container {
   border: 2px solid black;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
 }
 
 .sidebar {
   border: 2px solid red;
+  width: 25%;
+  max-width: 25%;
+}
+
+.sidebar li {
+  list-style-type: none;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #3b3939;
 }
 
 .main-container {
   border: 2px solid blue;
+  width: 75%;
+  max-width: 75%;
 }
