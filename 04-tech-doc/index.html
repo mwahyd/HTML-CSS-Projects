@@ -20,10 +20,10 @@
           <li><a href="#js-java">JavaScript and Java</a></li>
           <li><a href="#hello">Hello World</a></li>
           <li><a href="#variables">Variables</a></li>
-          <li><a href="#">Declaring Variables</a></li>
-          <li><a href="#">Variable Scope</a></li>
-          <li><a href="#">Global Variables</a></li>
-          <li><a href="#">Constants</a></li>
+          <li><a href="#declare-variables">Declaring Variables</a></li>
+          <li><a href="#variable-scope">Variable Scope</a></li>
+          <li><a href="#global-var">Global Variables</a></li>
+          <li><a href="#constants">Constants</a></li>
           <li><a href="#">Data Types</a></li>
           <li><a href="#">If...Else Statement</a></li>
           <li><a href="#">While Statement</a></li>
@@ -169,23 +169,117 @@
         </section>
 
         <section>
-          <h2 id=""></h2>
-          <div class="content"></div>
+          <h2 id="declare-variables">Declaring variables</h2>
+          <div class="content">
+            <p>You can declare a variable in three ways:</p>
+            <p>With the keyword var. For example,</p>
+            <p class="code-block">var x = 42.</p>
+            <p>
+              This syntax can be used to declare both local and global
+              variables.
+            </p>
+            <p>By simply assigning it a value. For example,</p>
+            <p class="code-block">x = 42.</p>
+            <p>
+              This always declares a global variable. It generates a strict
+              JavaScript warning. You shouldn't use this variant.
+            </p>
+            <p>With the keyword let. For example,</p>
+            <p class="code-block">let y = 13.</p>
+            <p>
+              This syntax can be used to declare a block scope local variable.
+              See Variable scope below.
+            </p>
+          </div>
         </section>
 
         <section>
-          <h2 id=""></h2>
-          <div class="content"></div>
+          <h2 id="variable-scope">Variable scope</h2>
+          <div class="content">
+            <p>
+              When you declare a variable outside of any function, it is called
+              a global variable, because it is available to any other code in
+              the current document. When you declare a variable within a
+              function, it is called a local variable, because it is available
+              only within that function.
+            </p>
+            <p>
+              JavaScript before ECMAScript 2015 does not have block statement
+              scope; rather, a variable declared within a block is local to the
+              function (or global scope) that the block resides within. For
+              example the following code will log 5, because the scope of x is
+              the function (or global context) within which x is declared, not
+              the block, which in this case is an if statement.
+            </p>
+            <p class="code-block">
+              if (true) { var x = 5; } console.log(x); // 5
+            </p>
+            <p>
+              This behavior changes, when using the let declaration introduced
+              in ECMAScript 2015.
+            </p>
+            <p class="code-block">
+              if (true) { let y = 5; } console.log(y); // ReferenceError: y is
+              not defined
+            </p>
+          </div>
         </section>
 
         <section>
-          <h2 id=""></h2>
-          <div class="content"></div>
+          <h2 id="global-var">Global Variables</h2>
+          <div class="content">
+            <p>
+              Global variables are in fact properties of the global object. In
+              web pages the global object is window, so you can set and access
+              global variables using the window.variable syntax.
+            </p>
+            <p>
+              Consequently, you can access global variables declared in one
+              window or frame from another window or frame by specifying the
+              window or frame name. For example, if a variable called
+              phoneNumber is declared in a document, you can refer to this
+              variable from an iframe as parent.phoneNumber.
+            </p>
+          </div>
         </section>
 
         <section>
-          <h2 id=""></h2>
-          <div class="content"></div>
+          <h2 id="constants">Constants</h2>
+          <div class="content">
+            <p>
+              You can create a read-only, named constant with the const keyword.
+              The syntax of a constant identifier is the same as for a variable
+              identifier: it must start with a letter, underscore or dollar sign
+              and can contain alphabetic, numeric, or underscore characters.
+            </p>
+            <p class="code-block">const PI = 3.14;</p>
+            <p>
+              A constant cannot change value through assignment or be
+              re-declared while the script is running. It has to be initialized
+              to a value.
+            </p>
+            <p>
+              The scope rules for constants are the same as those for let block
+              scope variables. If the const keyword is omitted, the identifier
+              is assumed to represent a variable.
+            </p>
+            <p>
+              You cannot declare a constant with the same name as a function or
+              variable in the same scope. For example:
+            </p>
+            <p class="code-block">
+              // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+              WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
+              //statements }
+            </p>
+            <p>
+              However, object attributes are not protected, so the following
+              statement is executed without problems.
+            </p>
+            <p class="code-block">
+              const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";
+            </p>
+          </div>
         </section>
 
         <section>
