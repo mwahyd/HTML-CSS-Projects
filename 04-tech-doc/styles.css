@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  border: 2px solid red;
+}
+
+.main-container {
+  border: 2px solid blue;
+}
