@@ -21,6 +21,14 @@ body {
   max-width: 25%;
 }
 
+.sidebar h1 {
+  color: #3b3939;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid yellow;
+}
+
 .sidebar li {
   list-style-type: none;
 }
