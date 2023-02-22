@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  border: 2px solid black;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
 .sidebar {
   border: 2px solid red;
 }
