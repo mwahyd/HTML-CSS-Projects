@@ -16,10 +16,15 @@ body {
 
 /* sidebar */
 
-.sidebar {
+.nav-container {
   width: 25%;
   max-width: 25%;
   border-right: 3px solid grey;
+}
+
+nav {
+  width: 20%;
+  position: fixed;
 }
 
 .sidebar h1 {
