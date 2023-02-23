@@ -6,12 +6,12 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #ecdcbb;
+  background-color: #16213e;
 }
 
 /* class selectors */
 .main-container {
-  border: 2px solid #e1c793;
+  border: 2px solid #0f3460;
   height: 100vh;
   width: 60%;
   margin: 0 auto;
@@ -38,9 +38,9 @@ body {
 }
 
 a:visited {
-  color: #7a4fc9;
+  color: #e94560;
 }
 
 a:hover {
-  color: black;
+  color: #533483;
 }
