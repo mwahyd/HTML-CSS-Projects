@@ -80,6 +80,12 @@ nav {
 /* attributes */
 .code-block {
   background-color: #efecec;
+  width: 100%;
+  height: 80px;
+  text-align: left;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
 }
 
 .V-spacing {
